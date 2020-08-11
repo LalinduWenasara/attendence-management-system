@@ -18,7 +18,7 @@ namespace attendence_management_system
         {
             InitializeComponent();
         }
-        public string encryption(String password)
+      /*  public string encryption(String password)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
             byte[] encrypt;
@@ -33,7 +33,7 @@ namespace attendence_management_system
             }
             return encryptdata.ToString();
         }
-
+      */
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
@@ -45,7 +45,10 @@ namespace attendence_management_system
             else
             {
                 DataSet1TableAdapters.UsersTableAdapter ada = new DataSet1TableAdapters.UsersTableAdapter();
-                temppass=encryption(metroTextBoxRegpassword.Text);
+
+
+                Crypt new2 = new Crypt();
+                temppass =new2.encryption(metroTextBoxRegpassword.Text);
 
                 ada.InsertQuery(metroTextBoxRegusername.Text, temppass);
                 MessageBox.Show("Registeration completed");

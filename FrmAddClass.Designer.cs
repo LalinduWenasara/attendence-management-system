@@ -39,6 +39,7 @@
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.Size = new System.Drawing.Size(498, 23);
             this.metroTextBox1.TabIndex = 0;
+            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // metroButton1
             // 

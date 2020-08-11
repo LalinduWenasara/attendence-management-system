@@ -13,7 +13,7 @@ namespace attendence_management_system
 {
     public partial class mainfrm : MetroFramework.Forms.MetroForm
     {
-
+        
         public int loggedIn { get; set; }
         public int UserID { get; set; }
 
@@ -24,7 +24,7 @@ namespace attendence_management_system
 
 
 
-
+            // 
             this.StyleManager = metroSM;
 
 
@@ -92,15 +92,6 @@ namespace attendence_management_system
 
 
 
-
-
-
-
-
-
-
-
-
                     // this.classesTBLTableAdapter.Fill(this.dataSet1.ClassesTBL);
                     // classesTBLBindingSource.Filter = "UserID = '" + UserID.ToString() + "'";
 
@@ -122,7 +113,7 @@ namespace attendence_management_system
             students.ClassName = metroComboBox1.Text;
             students.ClassID = (int)metroComboBox1.SelectedValue;
             students.ShowDialog();
-
+            refresh1();
 
 
         }
@@ -134,9 +125,12 @@ namespace attendence_management_system
             FrmAddClass addclass = new FrmAddClass();
             addclass.UserID = this.UserID;
             addclass.ShowDialog();
+            refresh1();
+            
 
 
-           
+
+
 
 
 
@@ -295,6 +289,7 @@ namespace attendence_management_system
         {
             RegisterForm reg = new RegisterForm();
             reg.ShowDialog();
+            refresh1();
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -452,6 +447,42 @@ namespace attendence_management_system
         private void button2_Click(object sender, EventArgs e)
         {
             metroSM.Theme = MetroFramework.MetroThemeStyle.Light;
+        }
+
+        private void metroButton7_Click_1(object sender, EventArgs e)
+        {
+           
+            
+            LoginForm ss = new LoginForm();
+            ss.loginFlag = false;
+            ss.Show();
+           // this.Close();
+
+        }
+
+
+        public void refresh1()
+        {
+           
+                this.Refresh();
+            
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void statusStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void metroButton8_Click(object sender, EventArgs e)
+        {
+            DeleteClass del = new DeleteClass();
+            del.Show();
+            refresh1();
         }
     }
 }

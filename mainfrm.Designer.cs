@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainfrm));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton8 = new MetroFramework.Controls.MetroButton();
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.metroButtonGet = new MetroFramework.Controls.MetroButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -72,6 +73,7 @@
             this.metroSM = new MetroFramework.Components.MetroStyleManager(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -93,11 +95,12 @@
             this.metroTabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 0;
-            this.metroTabControl1.Size = new System.Drawing.Size(1107, 857);
+            this.metroTabControl1.Size = new System.Drawing.Size(1107, 891);
             this.metroTabControl1.TabIndex = 0;
             // 
             // metroTabPage1
             // 
+            this.metroTabPage1.Controls.Add(this.metroButton8);
             this.metroTabPage1.Controls.Add(this.metroButton5);
             this.metroTabPage1.Controls.Add(this.metroButtonGet);
             this.metroTabPage1.Controls.Add(this.statusStrip1);
@@ -114,18 +117,28 @@
             this.metroTabPage1.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(1099, 814);
+            this.metroTabPage1.Size = new System.Drawing.Size(1099, 848);
             this.metroTabPage1.TabIndex = 0;
             this.metroTabPage1.Text = "Attendence";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarSize = 11;
             // 
+            // metroButton8
+            // 
+            this.metroButton8.Location = new System.Drawing.Point(965, 206);
+            this.metroButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.metroButton8.Name = "metroButton8";
+            this.metroButton8.Size = new System.Drawing.Size(108, 123);
+            this.metroButton8.TabIndex = 14;
+            this.metroButton8.Text = "Delete Class";
+            this.metroButton8.Click += new System.EventHandler(this.metroButton8_Click);
+            // 
             // metroButton5
             // 
-            this.metroButton5.Location = new System.Drawing.Point(965, 528);
+            this.metroButton5.Location = new System.Drawing.Point(965, 486);
             this.metroButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(108, 165);
+            this.metroButton5.Size = new System.Drawing.Size(108, 144);
             this.metroButton5.TabIndex = 13;
             this.metroButton5.Text = "Register";
             this.metroButton5.Click += new System.EventHandler(this.metroButton5_Click);
@@ -147,12 +160,13 @@
             this.toolStripStatusLabel1,
             this.statusLabelUSer,
             this.sratLblUser});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 788);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 822);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
             this.statusStrip1.Size = new System.Drawing.Size(1099, 26);
             this.statusStrip1.TabIndex = 11;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // toolStripStatusLabel1
             // 
@@ -174,20 +188,20 @@
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(965, 337);
+            this.metroButton4.Location = new System.Drawing.Point(965, 342);
             this.metroButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(108, 149);
+            this.metroButton4.Size = new System.Drawing.Size(108, 128);
             this.metroButton4.TabIndex = 10;
             this.metroButton4.Text = "Add Student";
             this.metroButton4.Click += new System.EventHandler(this.metroButton4_Click);
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(965, 160);
+            this.metroButton3.Location = new System.Drawing.Point(965, 68);
             this.metroButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(108, 144);
+            this.metroButton3.Size = new System.Drawing.Size(108, 123);
             this.metroButton3.TabIndex = 9;
             this.metroButton3.Text = "Add Class";
             this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
@@ -328,7 +342,7 @@
             this.metroTabPage2.Location = new System.Drawing.Point(4, 39);
             this.metroTabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.metroTabPage2.Name = "metroTabPage2";
-            this.metroTabPage2.Size = new System.Drawing.Size(1099, 814);
+            this.metroTabPage2.Size = new System.Drawing.Size(1099, 848);
             this.metroTabPage2.TabIndex = 1;
             this.metroTabPage2.Text = "Reports";
             this.metroTabPage2.VerticalScrollbarBarColor = true;
@@ -453,7 +467,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1081, 30);
+            this.button1.Location = new System.Drawing.Point(973, 28);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(46, 44);
@@ -466,19 +480,29 @@
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(1034, 30);
+            this.button2.Location = new System.Drawing.Point(932, 28);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 44);
+            this.button2.Size = new System.Drawing.Size(43, 44);
             this.button2.TabIndex = 6;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // metroButton7
+            // 
+            this.metroButton7.Location = new System.Drawing.Point(1045, 28);
+            this.metroButton7.Name = "metroButton7";
+            this.metroButton7.Size = new System.Drawing.Size(82, 44);
+            this.metroButton7.TabIndex = 7;
+            this.metroButton7.Text = "log out";
+            this.metroButton7.Click += new System.EventHandler(this.metroButton7_Click_1);
             // 
             // mainfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1147, 951);
+            this.ClientSize = new System.Drawing.Size(1147, 985);
+            this.Controls.Add(this.metroButton7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.metroTabControl1);
             this.Controls.Add(this.button1);
@@ -549,6 +573,8 @@
         private MetroFramework.Components.MetroStyleManager metroSM;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private MetroFramework.Controls.MetroButton metroButton7;
+        private MetroFramework.Controls.MetroButton metroButton8;
     }
 }
 

@@ -27,5 +27,10 @@ namespace attendence_management_system
             ada.Addclass(metroTextBox1.Text, UserID);
             Close();
         }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

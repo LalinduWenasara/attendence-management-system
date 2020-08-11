@@ -47,7 +47,7 @@ namespace attendence_management_system
         }
 
 
-        public string encryption(String password)
+     /*   public string encryption(String password)
         {
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
             byte[] encrypt;
@@ -62,7 +62,7 @@ namespace attendence_management_system
             }
             return encryptdata.ToString();
         }
-
+     */
 
 
         private void metroButtonLogin_Click(object sender, EventArgs e)
@@ -74,19 +74,23 @@ namespace attendence_management_system
 
             DataSet1TableAdapters.UsersTableAdapter userAda = new DataSet1TableAdapters.UsersTableAdapter();
 
-           passwordTemfordec = encryption(metroTextBoxpassword.Text);
+
+            Crypt new1 = new Crypt();
+            passwordTemfordec=new1.encryption(metroTextBoxpassword.Text);
+
+           //passwordTemfordec = encryption(metroTextBoxpassword.Text);
    
             DataTable dt = userAda.GetDataByUserAndPass(metroTextBoxusername.Text, passwordTemfordec);
 
 
-            MessageBox.Show(metroTextBoxusername.Text+"  test   " + passwordTemfordec);
+          //  MessageBox.Show(metroTextBoxusername.Text+"  test   " + passwordTemfordec); // test  
           //   int UserIdtest = int.Parse(dt.Rows[0]["UserID"].ToString());
          //   MessageBox.Show"UserIdtest");
 
             if (dt.Rows.Count > 0)
             {
                 //valid
-                MessageBox.Show("Login successful");
+               // MessageBox.Show("Login successful");
                 UserID = int.Parse(dt.Rows[0]["UserID"].ToString());
                 loginFlag = true;
                 

@@ -34,21 +34,19 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTextBoxRegusername
             // 
-            this.metroTextBoxRegusername.Location = new System.Drawing.Point(290, 293);
+            this.metroTextBoxRegusername.Location = new System.Drawing.Point(323, 157);
             this.metroTextBoxRegusername.Name = "metroTextBoxRegusername";
             this.metroTextBoxRegusername.Size = new System.Drawing.Size(240, 23);
             this.metroTextBoxRegusername.TabIndex = 0;
             // 
             // metroTextBoxcpassword
             // 
-            this.metroTextBoxcpassword.Location = new System.Drawing.Point(290, 429);
+            this.metroTextBoxcpassword.Location = new System.Drawing.Point(323, 293);
             this.metroTextBoxcpassword.Name = "metroTextBoxcpassword";
             this.metroTextBoxcpassword.PasswordChar = '*';
             this.metroTextBoxcpassword.Size = new System.Drawing.Size(240, 23);
@@ -56,7 +54,7 @@
             // 
             // metroTextBoxRegpassword
             // 
-            this.metroTextBoxRegpassword.Location = new System.Drawing.Point(290, 366);
+            this.metroTextBoxRegpassword.Location = new System.Drawing.Point(323, 230);
             this.metroTextBoxRegpassword.Name = "metroTextBoxRegpassword";
             this.metroTextBoxRegpassword.PasswordChar = '*';
             this.metroTextBoxRegpassword.Size = new System.Drawing.Size(240, 23);
@@ -65,7 +63,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(101, 293);
+            this.metroLabel1.Location = new System.Drawing.Point(134, 157);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(80, 20);
             this.metroLabel1.TabIndex = 3;
@@ -74,7 +72,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(101, 432);
+            this.metroLabel2.Location = new System.Drawing.Point(134, 296);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(119, 20);
             this.metroLabel2.TabIndex = 4;
@@ -83,23 +81,15 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(101, 366);
+            this.metroLabel3.Location = new System.Drawing.Point(134, 230);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(66, 20);
             this.metroLabel3.TabIndex = 5;
             this.metroLabel3.Text = "Password";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(208, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(179, 151);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(245, 509);
+            this.metroButton1.Location = new System.Drawing.Point(278, 373);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(126, 56);
             this.metroButton1.TabIndex = 7;
@@ -113,7 +103,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(646, 670);
             this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -122,7 +111,6 @@
             this.Controls.Add(this.metroTextBoxRegusername);
             this.Name = "RegisterForm";
             this.Text = "Registerform";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,7 +124,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
